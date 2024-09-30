@@ -1,6 +1,12 @@
 ul li {
+  list-style-type: disc;
+}
+
+
+ul.valid li, ul.invalid li {
   list-style-type: none;
 }
+
 
 ul.valid li::before {
   content: "";

@@ -24,3 +24,15 @@ src: ./01-names.md
 ---
 src: ./02-comments.md
 ---
+
+---
+src: ./03-format.md
+---
+
+---
+src: ./04-functions.md
+---
+
+---
+src: ./05-object-calisthenics.md
+---

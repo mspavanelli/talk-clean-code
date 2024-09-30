@@ -1,5 +1,5 @@
 ---
-layout: section
+layout: center
 transition: slide-up
 ---
 
@@ -39,7 +39,7 @@ transition: slide-down
 </div>
 
 ---
-layout: section
+layout: center
 transition: slide-left
 ---
 

@@ -1,38 +1,45 @@
 ---
 layout: default
+transition: fade
 ---
 
-<h1 v-mark.box.yellow class="w-fit px-4">Comentários</h1>
+# Comentários
 
+### Evite!
 
-Use nomes que revelem seu propósito
+### Explique-se no código
 
-````md magic-move
-```java {2-13}
-public static void main(String[] args) {
-    Integer num = 1;
-    switch (num) {
-        case 1:
-            num += 1;
-            break;
-        case 2:
-            num += 2;
-            break;
-        default:
-            break;
-    }
-    System.out.println(num);
+```ts
+// Verifica se o funcionário tem direito a todos os benefícios
+if ((employee.flags && HOURLY_FLAG) && employee.age > 65) {
+    //...
 }
 ```
-```kotlin {2-8}
-fun main() {
-    var num = 1
-    when (num) {
-        1    -> num += 1
-        2    -> num += 2
-        else -> {}
-    }
-    println(num)
+
+ou 
+
+
+```ts
+if (employee.isEligibleForFullBenefits()) {
+    //...
 }
 ```
-````
+* Codigo como comentário (remova)
+
+
+---
+layout: default
+transition: fade
+---
+
+# Comentários
+
+### O que não deve ser comentado
+* Informações que podem ser rapidamente deduzidos a partir do próprio código
+* "*Comentários-muleta*" que compensam códigos ruins. Melhor corrigir o código
+
+<hr class="my-4"/>
+
+### O que pode ser comentado (com cautela)
+* Informações que explicam o **funcionamento** do código (comentário do diretor)
+* Falhas, utilizando marcadores como `TODO:` ou `FIXME:`

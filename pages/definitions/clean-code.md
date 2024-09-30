@@ -5,7 +5,7 @@ layout: two-cols
 # Clean Code
 
 <ul class="list-unset valid space-y-8 mt-14">
-  <li v-motion :initial="{opacity: 0}" :click-1="{opacity: 1}"><span v-click>Legibilidade</span> <span v-click>→ Fácil leitura</span> <span v-click>≠ simples</span></li>
+  <li v-motion :initial="{opacity: 0}" :click-1="{opacity: 1}"><span v-click>Legibilidade</span> <span v-click>→ Fácil leitura</span></li>
   <li v-click>Manutenível</li>
   <li v-click>Previsível</li>
   <li v-click>Confiável</li>
@@ -19,7 +19,7 @@ layout: two-cols
 <ul class="list-unset invalid space-y-8 mt-14">
   <li v-click>um manual</li>
   <li v-click>um código menor</li>
-  <li v-click>performance</li>
+  <li v-click>performance *</li>
   <li v-click>estrutura de pastas</li>
   <li v-click>design de software / arquitetura</li>
 </ul>
