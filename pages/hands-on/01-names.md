@@ -170,6 +170,10 @@ O tamanho do nome é proporcional ao escopo
 * variáveis que existem somente num método ou classe podem aproveitar do contexto
 * variáveis globais precisam ter nomes mais específicos para compensar seu alcance
 
+<div v-click class="p-4 shadow bg-zinc-50 my-5 w-fit">
+💡 Torne sua variável visível para o menor número possível de linhas de código
+</div>
+
 ---
 layout: default
 transition: fade
@@ -195,7 +199,3 @@ class Person {
 }
 ```
 ````
-
-Remova ambiguidade
-
-gg
