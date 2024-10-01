@@ -36,12 +36,11 @@ layout: default
 
 ---
 layout: center
+transition: fade
 ---
 
 <Arrow x1="50%" y1="10%" x2="50%" y2="90%" two-way />
 <Arrow x1="90%" y1="50%" x2="10%" y2="50%" two-way />
-<Arrow x1="10" y1="10" x2="160" y2="10" class="text-green-600" />
-<span class="text-green-600 absolute top-10 left-10">refatoração</span>
 
 <span class="absolute top-[48%] left-10">- Limpo</span>
 <span class="absolute top-[48%] right-10">+ Limpo</span>
@@ -53,5 +52,39 @@ layout: center
 <p class="!my0">y: comportamento</p>
 </div>
   
-<img src="/assets/dog-fire.gif" class="absolute left-30" v-click/>
-<img src="/assets/mr-incredible-happy.webp" class="absolute left-[60%] top-16 size-48" v-click/>
+<!-- <img src="/assets/dog-fire.gif" class="absolute left-30" v-click/> -->
+<div class="bg-yellow" v-if="$clicks <= 4">
+  <img src="/assets/mr-incredible/happy.webp" class="absolute left-[60%] top-16 size-48" v-click/>
+  <img src="/assets/mr-incredible/neutral.webp" class="absolute left-[20%] top-16 size-48" v-click/>
+  <img src="/assets/mr-incredible/uncanny.webp" class="absolute left-[20%] top-76 size-48" v-click/>
+  <img src="/assets/mr-incredible/work.gif" class="absolute left-[55%] top-76 h-48" v-click/>
+</div>
+
+---
+layout: center
+transition: fade
+---
+
+<Arrow x1="50%" y1="10%" x2="50%" y2="90%" two-way />
+<Arrow x1="90%" y1="50%" x2="10%" y2="50%" two-way />
+
+<span class="absolute top-[48%] left-10">- Limpo</span>
+<span class="absolute top-[48%] right-10">+ Limpo</span>
+<span class="absolute top-[5%] left-[47%]">Funciona</span>
+<span class="absolute bottom-[4%] left-[46%]">Não Funciona</span>
+
+  <!-- <Arrow x1="10" y1="10" x2="160" y2="10" class="text-green-600" /> -->
+<div v-click class="absolute top-4 left-4 text-sm bg-zinc-50 p-2 shadow text-zinc-500 w-fit h-fit flex flex-col">
+  <span class="text-green-600">melhoria/bugfix</span>
+  <span class="text-red-600">bug</span>
+  <span class="text-blue-600">refatoração</span>
+</div>
+
+<v-drag-arrow v-click pos="161,194,-2,-83" class="text-green-600"/>
+<v-drag-arrow v-click pos="204,176,1,75" class="text-red-600"/>
+<v-drag-arrow v-click pos="138,323,76,-1" class="text-blue-600"/>
+
+<div class="absolute bottom-4 right-4 flex flex-col text-sm bg-zinc-50 p-2 shadow text-zinc-500">
+<p class="!my-0">x: estrutura</p>
+<p class="!my0">y: comportamento</p>
+</div>

@@ -1,8 +1,9 @@
 ---
 layout: two-cols
+transition: slide-up
 ---
 
-<h1 v-mark.box class="w-fit p-4">Princípios</h1>
+# Princípios
 
 <ul class="list-unset space-y-8 mt-14">
   <li v-click class="flex items-center gap-2"><PhArrowRight :size="4" /> Simplicidade na comunicação</li>
