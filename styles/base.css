@@ -1,0 +1,38 @@
+ul li {
+  list-style-type: disc;
+}
+
+ul.valid li,
+ul.invalid li {
+  list-style-type: none;
+}
+
+ul.valid li::before {
+  content: "";
+  background-image: url("assets/item-true.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 0.5em;
+}
+
+ul.invalid li::before {
+  content: "";
+  background-image: url("assets/item-false.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 0.5em;
+}
+
+.box {
+  padding: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+}

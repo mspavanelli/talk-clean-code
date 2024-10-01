@@ -1,178 +1,40 @@
 ---
 theme: default
-title: "slidev tutorial"
-background: ./assets/abstract.avif
+title: Clean Code
+image: ./assets/cover.webp
+drawings:
+  persist: false
 transition: slide-left
 fonts:
-  sans: Nunito
+  provider: google
+  sans: Neucha
 ---
 
-# Clean Code
+<img src="/assets/cover.webp" class="absolute top-0 left-0" v-motion :initial="{x: 0}" :click-1='{x: 500, transition: {duration: 750}}' :leave='{x: 0}'/>
 
-A arte de escrever programas legíveis
-
----
-transition: slide-up
-layout: two-cols
----
-
-Use nomes que revelem seu propósito
-
-````md magic-move
-```java
-public List<int[]> getThem() {
-  List<int[]> list1 = new ArrayList<int[]>();
-  for (int[] x : theList) {
-    if (x[0] == 4) {
-      list.add(x);
-    }
-  }
-  return list1;
-}
-```
-
-```java
-public List<int[]> getFlaggedCells() {
-  List<int[]> flaggedCells = new ArrayList<int[]>();
-  for (int[] cell : gameBoard) {
-    if (cell[STATUS_VALUE] == FLAGGED) {
-      flaggedCells.add(cell);
-    }
-  }
-  return flaggedCells;
-}
-```
-
-```java
-public List<int[]> getFlaggedCells() {
-  List<int[]> flaggedCells = new ArrayList<int[]>();
-  for (Cell cell : gameBoard) {
-    if (cell.isFlagged()) {
-      flaggedCells.add(cell);
-    }
-  }
-  return flaggedCells;
-}
-```
-````
-
-::right::
-
-<div class="mt-14 ml-4" v-click="4">
-
-```java
-public List<int[]> getThem() {
-  List<int[]> list1 = new ArrayList<int[]>();
-  for (int[] x : theList) {
-    if (x[0] == 4) {
-      list.add(x);
-    }
-  }
-  return list1;
-}
-```
-
+<div class="h-full w-1/2 flex flex-col justify-between">
+  <header>
+    <h1 v-click="2">Clean Code</h1>
+    <p v-click="3">Boas práticas para programadores</p>
+  </header>
+  <div v-motion :initial="{scale: 0, y: 20}" :click-4="{scale: 1, y: 0}" class="w-fit">
+    <p class="!mt-0 !mb-1">Matheus <span class="font-bold" v-mark="{at: 5}">Pavanelli</span></p>
+    <p class="!my-0 text-sm text-zinc-500">Desenvolvedor Web</p>
+  </div>
 </div>
 
 ---
-layout: default
+src: ./pages/prologue/index.md
 ---
 
-Extraia os blocos try/catch
-
-````md magic-move
-```ts
-function delete(page: Page) {
-  try {
-    deletePage(page);
-    registry.deleteReferenece(page.name);
-    config.keys.deleteKeys(page.name.makeKey());
-  } catch (Excepetion e) {
-    logger.log(e.getMessage());
-  }
-}
-```
-
-```ts
-function delete(page: Page) {
-  try {
-    deletePage(page);
-    registry.deleteReferenece(page.name);
-    config.keys.deleteKeys(page.name.makeKey());
-  } catch (Excepetion e) {
-    logger.log(e.getMessage());
-  }
-}
-
-function deletePageAndAllReferences(page: Page) throws Exception {
-
-}
-
-function logError(Exception e) {
-
-}
-```
-
-```ts
-function delete(page: Page) {
-  try {
-
-  } catch (Excepetion e) {
-
-  }
-}
-
-function deletePageAndAllReferences(page: Page) throws Exception {
-  deletePage(page);
-  registry.deleteReferenece(page.name);
-  config.keys.deleteKeys(page.name.makeKey());
-}
-
-function logError(Exception e) {
-  logger.log(e.getMessage());
-}
-```
-
-```ts
-function delete(page: Page) {
-  try {
-    deletePageAndAllReferences(page);
-  } catch (Excepetion e) {
-    logError(e);
-  }
-}
-
-function deletePageAndAllReferences(page: Page) throws Exception {
-  deletePage(page);
-  registry.deleteReferenece(page.name);
-  config.keys.deleteKeys(page.name.makeKey());
-}
-
-function logError(Exception e) {
-  logger.log(e.getMessage());
-}
-```
-````
-
 ---
-layout: default
+src: ./pages/definitions/index.md
 ---
 
-````md magic-move
-```ts
-let d = 10; // days since creation
-```
-
-```ts
-let daysSinceCreation = 10;
-```
-````
-
 ---
-layout: statement
+src: ./pages/hands-on/index.md
 ---
 
-<div class="w-160 mx-auto">
-  <em class="text-xl">"Qualquer um consegue escrever código que um computador entende. Bons programadores escrevem código que humanos entendem"</em>
-  <p class="text-right text-gray-500">Martin Fowler</p>
-</div>
+---
+src: ./pages/outro/index.md
+---
