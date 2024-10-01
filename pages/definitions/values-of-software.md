@@ -80,9 +80,12 @@ transition: fade
   <span class="text-blue-600">refatoração</span>
 </div>
 
-<v-drag-arrow v-click pos="161,194,-2,-83" class="text-green-600"/>
-<v-drag-arrow v-click pos="204,176,1,75" class="text-red-600"/>
-<v-drag-arrow v-click pos="138,323,76,-1" class="text-blue-600"/>
+<v-drag-arrow v-click pos="161,194,0,-83" class="text-green-600"/>
+<v-drag-arrow v-click pos="204,176,0,75" class="text-red-600"/>
+<v-drag-arrow v-click pos="138,323,90,1" class="text-blue-600"/>
+
+<v-drag-arrow v-click pos="761,194,0,-83" class="text-green-600"/>
+<v-drag-arrow v-click pos="449,346,0,-83" class="text-green-600"/>
 
 <div class="absolute bottom-4 right-4 flex flex-col text-sm bg-zinc-50 p-2 shadow text-zinc-500">
 <p class="!my-0">x: estrutura</p>

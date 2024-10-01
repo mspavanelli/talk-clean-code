@@ -48,4 +48,9 @@ transition: fade
 
 ### O que pode ser comentado (com cautela)
 * Informações que explicam o **funcionamento** do código (comentário do diretor)
+```py
+# remove tudo depois do segundo '*'
+name = '*'.join(line.split('*')[:2])
+```
+
 * Falhas, utilizando marcadores como `TODO:` ou `FIXME:`

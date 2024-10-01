@@ -104,6 +104,39 @@ transition: fade
 # Funções
 Parâmetros e retorno
 
+<v-clicks>
+
+- A quantidade ideal de parâmetros para uma função é zero
+- Se não for possível, utilize 1 parâmetro
+- Em casos mais específicos, utilize 2
+- Como última opção, utilize 3
+- Para mais de 3 deve-se ter um motivo muito especial
+- Funções com retorno não podem ter side-effects
+- Evite parâmetros booleanos
+
+</v-clicks>
+
+<div class="grid grid-cols-2 gap-8" v-click>
+
+```ts
+function setOpen(value: boolean) {
+	isOpen = value;
+}
+```
+
+```ts
+function open() {
+	isOpen = true;
+}
+
+function close() {
+	isOpen = false;
+}
+```
+
+</div>
+
+
 ---
 layout: default
 transition: fade

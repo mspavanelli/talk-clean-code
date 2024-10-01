@@ -19,7 +19,7 @@ transition: fade
 - Tamanho da tabulação
 - Vírgulas no final da linha
 - Linha de fim de arquivo
-- Ordem dos `imports`
+- Ordem das importações
 
 </v-clicks>
 

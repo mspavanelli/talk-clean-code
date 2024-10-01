@@ -2,6 +2,24 @@
 layout: default
 ---
 
+# Clean Code não é bala de prata
+
+### Quando não usar?
+
+<v-clicks>
+
+- MVPs
+- POCs
+- Projetos pontuais / com curto ciclo de vida
+- Equipes menos experientes
+- Overengineering
+
+</v-clicks>
+
+---
+layout: default
+---
+
 # Clean Code é uma Soft Skill!
 
 | **Hard Skill**                    | **Soft Skill**                            |

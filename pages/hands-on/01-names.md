@@ -151,10 +151,10 @@ Inclua informações úteis
 
 ````md magic-move
 ```ts
-let id: string; // Exemplo: "af84ef845cd8"
+let color: string; // Exemplo: "#06b6d4"
 ```
 ```ts
-let hex_id: string;
+let hexadecimal_color: string;
 ```
 ````
 
@@ -187,7 +187,7 @@ Não adicione contexto desnecessário
 class Person {
   private personName: string;
   private personDocument: string;
-  private personBirthday: string;
+  private personBirthday: Date;
 }
 ```
 
@@ -195,7 +195,7 @@ class Person {
 class Person {
   private name: string;
   private document: string;
-  private birthday: string;
+  private birthday: Date;
 }
 ```
 ````
